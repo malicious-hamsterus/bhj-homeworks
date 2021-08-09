@@ -14,8 +14,8 @@ let intervalId = setInterval(() => {
 function getHours(seconds) {
     let hours, mins, sec
 
-    hours = zeroAdder(Math.round(seconds / 3600))
-    mins = zeroAdder(Math.round(seconds % 3600 / 60))
+    hours = zeroAdder(Math.trunc(seconds / 3600))
+    mins = zeroAdder(Math.trunc((seconds % 3600) / 60))
     sec = zeroAdder(seconds % 60 % 60)
     return `${hours}:${mins}:${sec}`
 }
