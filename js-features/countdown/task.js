@@ -1,6 +1,5 @@
 const timerText = document.querySelector('#timer')
 let timer = timerText.textContent
-console.log(timer)
 let intervalId = setInterval(() => {
     if(timer === 0) {
         clearInterval(intervalId)
